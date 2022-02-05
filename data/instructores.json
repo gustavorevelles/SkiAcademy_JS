@@ -1,0 +1,74 @@
+[
+    { 
+        "id":1,
+        "nombre": "Juan López",
+        "estacionDisponible": "Valdesquí",
+        "mesDisponible": "Diciembre",
+        "precioDia": 45,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    { 
+        "id":2,
+        "nombre": "Esteban Rodriguez ",
+        "estacionDisponible": "Baqueira",
+        "mesDisponible": "Diciembre",
+        "precioDia": 60,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    { 
+        "id":3,
+        "nombre": "María Gómez ",
+        "estacionDisponible": "Sierra Nevada",
+        "mesDisponible": "Diciembre",
+        "precioDia": 80,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    { 
+        "id":4,
+        "nombre": "Emilio Garcia",
+        "estacionDisponible": "Candanchu",
+        "mesDisponible": "Enero",
+        "precioDia": 30,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    { 
+        "id":5,
+        "nombre": "Rosa Garcia",
+        "estacionDisponible": "Sierra Nevada",
+        "mesDisponible": "Enero",
+        "precioDia": 80,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    { 
+        "id":6,
+        "nombre": "Ernesto López",
+        "estacionDisponible": "Valdesqui",
+        "mesDisponible": "Enero",
+        "precioDia": 35,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    {
+        "id":7,
+        "nombre": "Alberto Garcia",
+        "estacionDisponible": "Candanchu",
+        "mesDisponible": "Febrero",
+        "precioDia": 70,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    {
+        "id":8,
+        "nombre": "Juana Garcia",
+        "estacionDisponible": "Sierra Nevada",
+        "mesDisponible": "Febrero",
+        "precioDia": 100,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    },
+    {
+        "id":9,
+        "nombre": "Augusto Ramos",
+        "estacionDisponible": "Candanchu",
+        "mesDisponible": "Marzo",
+        "precioDia": 70,
+        "fichaTecnica": "Lorem ipsum dolor amet consecuter"
+    }
+]

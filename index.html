@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ski Academy - La nueva forma de aprender a esquiar</title>
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!"><strong>Ski</strong> Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#buscador">Busca tu profesor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary py-5 bg-home">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2 txt-s">La nueva forma de aprender a esquiar</h1>
+                            <p class="lead text-white mb-4 txt-s">Somos una agrupación de instructores/as, fundada en 2010 para ofrecerte una experiencia única en la enseñanza de los deportes de invierno en España.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#buscador">Busca tu profesor</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Buscador-->
+        <section class="bg-light py-5" id="buscador">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Encuentra tu instructor ideal</h2>
+                    <p class="lead mb-0">Clases exclusivas en las mejores estaciones de España</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <form id="formularioBusqueda">
+                            <!-- Destino-->
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="selectDestino" id="selectDestino">
+                                    <!--Inyectado con JS-->
+                                </select>
+                                <label for="name">Destino</label>
+                            </div>
+                            <!-- Tipo de actividad-->
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="selectTipoActividad" id="selectTipoActividad">
+                                  <!--Inyectado con JS-->
+                                </select>
+                                <label for="name">Actividad</label>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <!-- Rango fechas-->
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" name="selectFechas" id="selectFechas">
+                                        <!--Inyectado con JS-->
+                                        </select>
+                                        <label for="name">Fechas</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!-- Cantidad personas-->
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" name="selectPersonas" id="selectPersonas">
+                                        <!--Inyectado con JS-->
+                                        </select>
+                                        <label for="name">Personas</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!-- Cantidad días-->
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="cantidadDias" max="7" min="1" value="1">
+                                        <label for="name">Días</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buscar-->
+                            <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Buscar instructores</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <section class="bg-secondary py-4" id="confirmaView">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5" id="resultados">
+                    <h2 class="fw-bolder text-white p-3">Confirmar su búsqueda</h2>
+                    <div class="table-responsive">
+                        <table class="table table-light">
+                            <thead>
+                            <tr>
+                                <th scope="col">Estación</th>
+                                <th scope="col">Tipo de actividad</th>
+                                <th scope="col">Mes</th>
+                                <th scope="col">Personas</th>
+                                <th scope="col">Días</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th id="estacionView"><!--Inyectado con JS--></th>
+                                <td id="tipoView"><!--Inyectado con JS--></td>
+                                <td id="mesView"><!--Inyectado con JS--></td>
+                                <td id="paxView"><!--Inyectado con JS--></td>
+                                <td id="diasView"><!--Inyectado con JS--></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4"><button class="btn btn-primary btn-lg" id="btnConfirmar">Mostrar Instructores y precio recomendado</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary py-3" id="viewResultados">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5" id="resultados">
+                    <h2 class="fw-bolder text-white p-3">Resultados y precios</h2>
+                    <p>Número de instructores encontrados: <span id="resultadoNum"></span></p>
+                    <div class="table-responsive">
+                    <table class="table table-light" id="resultadosFiltrados">
+                        <thead>
+                          <tr>
+                            <th scope="col">Instructor</th>
+                            <th scope="col">Ficha técnica</th>
+                            <th scope="col">Precio/día</th>
+                            <th scope="col">Cant. días</th>
+                            <th scope="col">Precio Total</th>
+                            <th scope="col">Reservar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!--Inyectado con JS-->
+                        </tbody>
+                      </table>
+                    </div>
+                      <button class="btn btn-light btn-lg" id="recargar">Volver a buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-dark py-5 Desactivo" id="viewFormReserva">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder text-white">Formulario de reserva</h2>
+                    <p class="lead mb-0 text-white">Por favor, completa todos los campos.</p>
+                    <div id="demo" class="text-white"></div>
+                    <div id="result"></div>
+                </div>
+                <form id="formReserva">
+                    <div class="row gx-5 justify-content-center">
+                        
+                        <div class="col-lg-6">
+                            
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="f_Nombre">
+                                        <label for="f_Nombre">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="f_Apellidos">
+                                        <label for="f_Apellidos">Apellidos</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="f_Direccion">
+                                        <label for="f_Direccion">Dirección</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="f_Ciudad">
+                                        <label for="f_Ciudad">Ciudad</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="f_CP">
+                                        <label for="f_CP">Código Postal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" class="form-control" id="f_Telefono">
+                                        <label for="f_Telefono">Teléfono</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="f_email">
+                                        <label for="f_email">Correo electrónico</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control"></textarea>
+                                        <label for="comentarios">Comentarios</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <p class="text-white">¿Cómo quieres realizar el pago?</p>
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="f_Pago_Tarjeta" id="f_Pago_Tarjeta" value="Tarjeta de crédito">
+                                            <label class="form-check-label text-white" for="f_Pago_Tarjeta">Tarjeta de crédito</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="f_Pago_Transfer" id="f_Pago_Transfer" value="Transferencia">
+                                            <label class="form-check-label text-white" for="f_Pago_Transfer">Transferencia</label>
+                                          </div>
+                                    </div>
+                                    <button class="btn btn-light btn-lg" id="submitButtonReserva" type="submit">Enviar reserva</button>
+                                    
+                                </div>
+                            </div>
+                            <div class="alert alert-danger Desactivo" role="alert" id="errorForm">
+                                Por favor, completa todos los campos.
+                            </div>
+                            <div class="alert alert-success Desactivo" role="alert" id="okForm">
+                                Formulario enviado.
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-5"><p class="m-0 text-center text-white">Ski Academy © 2022</p></div>
+        </footer>
+        
+        <!-- jQuery CDN-->
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/funciones.js"></script>
+        
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
